@@ -3,10 +3,11 @@
     padding: 0%;
 }
 body{
-    font-family: 'Roboto', sans-serif;
-    background-color: #e2e2e2;
+       background-color: #e2e2e2;
 }
 header {
+    font-family: "Poppins", sans-serifs;
+    font-size: 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -36,7 +37,6 @@ header {
 }
 
 .navigation a::after {
-    content: "";
     position: absolute;
     left: 0;
     bottom: -6px;
