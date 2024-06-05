@@ -1,0 +1,264 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #e2e2e2;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    padding: 20px 2px;
+    background: rgb(27, 49, 90);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background:#fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition:  transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #fff;
+    color: #162938;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(15, 128, 128);
+    color: white;
+    padding: 8px;
+    bottom: auto;
+    margin-top: 30px;
+}
+
+.mainText h1{
+    font-size: 55px;
+}
+
+.mainText h3{
+    font-size: 35px;
+    margin-top: 12px;
+}
+.mainText button{
+    width: 140px;
+    height: 40px;
+    border: none;
+    margin-top: 22px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.mainText button:hover{
+    border: 2px solid black;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+     
+}
+.doctors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    width: 300px;
+    background-color: #fff;
+   
+    border-radius: 4px;
+    margin-top: 20px;
+}
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+.card p{
+    margin-top: 11px;
+    margin-left: 11px;
+}
+.head{
+    text-align: center;
+    padding: 80px;
+}
+
+
+
+.footer{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 66px;
+    margin-bottom: 0;
+    color: white;
+    background-color: #162938;
+
+}
+.text p{
+    margin-top: 12px;
+}
+
+.content{
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    right: 50%;
+    width: 500px;
+    transform: translate(-50%, 40%);
+    background-color: #fff;
+    border-radius:11px;
+
+}
+.contentDetail{
+    display: flex;
+    padding: 23px;
+    gap: 22px;
+     
+}
+.contentDetail img{
+    width: 50%;
+    height: 300px;
+}
+.contentDetail p{
+    margin-top: 22px;
+}
+.content button{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(9, 97, 97);
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+#bar{
+    align-items: center;
+    display: none;
+    font-size: 25px;
+}
+@media screen and (max-width:900px){
+    .main{
+        text-align: center;
+        display: block;
+        height: auto;
+    }
+    .mainText{
+        margin-top: 115px;
+    }
+}
+
+@media screen and (max-width:900px){
+    ul{
+        display: none;
+    }
+    #bar{
+        display: block;
+    }
+
+} 
+
+@media screen and (max-width:850px){
+    .patients{
+        width: 90%;
+    }
+    .patientCard img{
+        width: 40%;
+    }
+}
+@media screen and (max-width:600px){
+    .mainText h1{
+        font-size: 33px;
+    }
+    .main img{
+        width: 90%;
+    }
+    .content{
+        width: 80%;
+    }
+    .contentDetail img{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:500px){
+    .patientCard img{
+        width: 40%;
+        height: 200px;
+        margin-inline: 8px;
+    }
+    .contact{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:500px){
+    .contentDetail img{
+        width: 50%;
+        height: 200px;
+    }
+    .contentDetail{
+        display: block;
+        text-align: center;
+    }
+    .contentDetail h1{
+        font-size: 22px;
+    }
+    .contentDetail p{
+        font-size: 15bpx;
+    }
+}
